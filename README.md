@@ -7,6 +7,8 @@ Check out the [project site](http://www.ainhuman.com) for all the details like
 - Brief description
 - Samples
 
+[Sample Video](https://www.youtube.com/watch?v=WvbD-ejz2NI)
+
 ## Futer plans
 - Fix some bugs including gui related bugs
 - Test with LSTM
