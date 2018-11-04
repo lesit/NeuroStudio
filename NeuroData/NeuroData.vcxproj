@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EF0507A9-7AA7-4952-A0EF-5CB954EA7F0B}</ProjectGuid>
+    <RootNamespace>NeuroData</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>NeuroData</ProjectName>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(Configuration) $(Platform)\</OutDir>
+    <IntDir>$(Configuration) $(Platform)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(Configuration) $(Platform)\</OutDir>
+    <IntDir>$(Configuration) $(Platform)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../common/;../;./;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_DEBUG;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>NLPUtil-d-x64.lib</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>../common/lib/NLPUtil/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>../common/;../;./;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>../common/lib/NLPUtil/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>NLPUtil-x64.lib</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\common\gui\win32\Win32Image.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\common\gui\win32\WinFileUtil.cpp" />
+    <ClCompile Include="..\common\storage\FileDeviceAdaptor.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\common\storage\MemoryDeviceAdaptor.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\common\storage\MMFDeviceAdaptor.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\common\util\LogFileWriter.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\common\util\np_util.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\common\util\StringUtil.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\common\dp\TextInputStream.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\common\dp\TextParsingReader.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="model\AbstractPreprocessorModel.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="model\AbstractProducerModel.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="model\AbstractReaderModel.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="model\CifarProducerModel.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="model\DataProviderModel.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="model\ImageFileProducerModel.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="model\NlpProducerModel.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="model\NumericProducerModel.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="model\TextReaderModel.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="reader\AbstractProducer.cpp" />
+    <ClCompile Include="reader\AbstractReader.cpp" />
+    <ClCompile Include="reader\DataPreloadBuffer.cpp" />
+    <ClCompile Include="reader\DataReaderSet.cpp" />
+    <ClCompile Include="reader\DataProvider.cpp" />
+    <ClCompile Include="reader\ImageFileProducer.cpp" />
+    <ClCompile Include="reader\MnistProducer.cpp" />
+    <ClCompile Include="reader\NeuroDataFormatProducer.cpp" />
+    <ClCompile Include="reader\NlpProducer.cpp" />
+    <ClCompile Include="reader\BinaryReader.cpp" />
+    <ClCompile Include="reader\NumericProducer.cpp" />
+    <ClCompile Include="reader\TextReader.cpp" />
+    <ClCompile Include="reader\WindllProducer.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="StreamWriter.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\common\common.h" />
+    <ClInclude Include="..\common\data_vector.h" />
+    <ClInclude Include="..\common\gui\ImageProcessing.h" />
+    <ClInclude Include="..\common\gui\shape.h" />
+    <ClInclude Include="..\common\gui\win32\Win32Image.h" />
+    <ClInclude Include="..\common\gui\win32\WinFileUtil.h" />
+    <ClInclude Include="..\common\NetworkBindingModel.h" />
+    <ClInclude Include="..\common\np_types.h" />
+    <ClInclude Include="..\common\storage\DeviceAdaptor.h" />
+    <ClInclude Include="..\common\storage\FileDeviceAdaptor.h" />
+    <ClInclude Include="..\common\storage\MemoryDeviceAdaptor.h" />
+    <ClInclude Include="..\common\storage\MMFDeviceAdaptor.h" />
+    <ClInclude Include="..\common\tensor\tensor_shape.h" />
+    <ClInclude Include="..\common\util\FileUtil.h" />
+    <ClInclude Include="..\common\util\LogFileWriter.h" />
+    <ClInclude Include="..\common\util\np_util.h" />
+    <ClInclude Include="..\common\util\randoms.h" />
+    <ClInclude Include="..\common\util\JobSignal.h" />
+    <ClInclude Include="..\common\util\StringDataFormat.h" />
+    <ClInclude Include="..\common\util\StringUtil.h" />
+    <ClInclude Include="..\common\util\UID64Pair32.h" />
+    <ClInclude Include="..\common\util\UniqueIdFactory.h" />
+    <ClInclude Include="..\common\dp\OneHotEncoder.h" />
+    <ClInclude Include="..\common\dp\TextInputStream.h" />
+    <ClInclude Include="..\common\dp\TextParsingReader.h" />
+    <ClInclude Include="..\common\lib\NLPUtil\include\MecabParser.h" />
+    <ClInclude Include="..\common\lib\NLPUtil\include\SentenceToWord.h" />
+    <ClInclude Include="..\common\lib\NLPUtil\include\WordToVector.h" />
+    <ClInclude Include="model\AbstractPreprocessorModel.h" />
+    <ClInclude Include="model\AbstractReaderModel.h" />
+    <ClInclude Include="model\AbstractProducerModel.h" />
+    <ClInclude Include="model\BinaryReaderModel.h" />
+    <ClInclude Include="model\CifarProducerModel.h" />
+    <ClInclude Include="model\DataProviderModel.h" />
+    <ClInclude Include="model\ImageFileProducerModel.h" />
+    <ClInclude Include="model\IncreasePredictProducerModel.h" />
+    <ClInclude Include="model\MnistProducerModel.h" />
+    <ClInclude Include="model\NlpProducerModel.h" />
+    <ClInclude Include="model\NumericProducerModel.h" />
+    <ClInclude Include="model\PreprocessorModelIncludeHeader.h" />
+    <ClInclude Include="model\TextReaderModel.h" />
+    <ClInclude Include="model\WindllProducerModel.h" />
+    <ClInclude Include="reader\AbstractPreprocessor.h" />
+    <ClInclude Include="reader\AbstractProducer.h" />
+    <ClInclude Include="reader\AbstractReader.h" />
+    <ClInclude Include="reader\DataPreloadBuffer.h" />
+    <ClInclude Include="reader\DataReaderSet.h" />
+    <ClInclude Include="reader\DataProvider.h" />
+    <ClInclude Include="reader\DataSourceCachedBuffer.h" />
+    <ClInclude Include="reader\DataSourceNameVector.h" />
+    <ClInclude Include="reader\ImageFileProducer.h" />
+    <ClInclude Include="reader\MnistProducer.h" />
+    <ClInclude Include="reader\NeuroDataFormatProducer.h" />
+    <ClInclude Include="reader\NlpProducer.h" />
+    <ClInclude Include="reader\BinaryReader.h" />
+    <ClInclude Include="reader\NumericProducer.h" />
+    <ClInclude Include="reader\TextReader.h" />
+    <ClInclude Include="reader\WindllProducer.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="StreamWriter.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

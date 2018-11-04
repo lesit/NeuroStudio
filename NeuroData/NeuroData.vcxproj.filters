@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="..\common\gui\win32\Win32Image.cpp">
+      <Filter>common\gui\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\storage\FileDeviceAdaptor.cpp">
+      <Filter>common\storage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\storage\MemoryDeviceAdaptor.cpp">
+      <Filter>common\storage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\storage\MMFDeviceAdaptor.cpp">
+      <Filter>common\storage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\util\LogFileWriter.cpp">
+      <Filter>common\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\util\np_util.cpp">
+      <Filter>common\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\util\StringUtil.cpp">
+      <Filter>common\util</Filter>
+    </ClCompile>
+    <ClCompile Include="StreamWriter.cpp" />
+    <ClCompile Include="model\CifarProducerModel.cpp">
+      <Filter>model</Filter>
+    </ClCompile>
+    <ClCompile Include="model\DataProviderModel.cpp">
+      <Filter>model</Filter>
+    </ClCompile>
+    <ClCompile Include="model\ImageFileProducerModel.cpp">
+      <Filter>model</Filter>
+    </ClCompile>
+    <ClCompile Include="model\NumericProducerModel.cpp">
+      <Filter>model</Filter>
+    </ClCompile>
+    <ClCompile Include="reader\DataPreloadBuffer.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="reader\DataProvider.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="reader\NeuroDataFormatProducer.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="model\AbstractReaderModel.cpp">
+      <Filter>model</Filter>
+    </ClCompile>
+    <ClCompile Include="model\TextReaderModel.cpp">
+      <Filter>model</Filter>
+    </ClCompile>
+    <ClCompile Include="reader\AbstractProducer.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="reader\TextReader.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="reader\DataReaderSet.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="reader\NlpProducer.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="reader\ImageFileProducer.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="reader\MnistProducer.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="reader\WindllProducer.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="model\NlpProducerModel.cpp">
+      <Filter>model</Filter>
+    </ClCompile>
+    <ClCompile Include="reader\BinaryReader.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="reader\AbstractReader.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="reader\NumericProducer.cpp">
+      <Filter>reader</Filter>
+    </ClCompile>
+    <ClCompile Include="model\AbstractProducerModel.cpp">
+      <Filter>model</Filter>
+    </ClCompile>
+    <ClCompile Include="model\AbstractPreprocessorModel.cpp">
+      <Filter>model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\gui\win32\WinFileUtil.cpp">
+      <Filter>common\gui\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\dp\TextInputStream.cpp">
+      <Filter>common\dp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\dp\TextParsingReader.cpp">
+      <Filter>common\dp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="..\common\lib\NLPUtil\include\WordToVector.h">
+      <Filter>common\lib\NLPUtil\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\gui\win32\Win32Image.h">
+      <Filter>common\gui\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\gui\ImageProcessing.h">
+      <Filter>common\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\gui\shape.h">
+      <Filter>common\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\storage\DeviceAdaptor.h">
+      <Filter>common\storage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\storage\FileDeviceAdaptor.h">
+      <Filter>common\storage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\storage\MemoryDeviceAdaptor.h">
+      <Filter>common\storage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\storage\MMFDeviceAdaptor.h">
+      <Filter>common\storage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\util\LogFileWriter.h">
+      <Filter>common\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\util\np_util.h">
+      <Filter>common\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\util\randoms.h">
+      <Filter>common\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\util\UID64Pair32.h">
+      <Filter>common\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\util\UniqueIdFactory.h">
+      <Filter>common\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\common.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\np_types.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\lib\NLPUtil\include\MecabParser.h">
+      <Filter>common\lib\NLPUtil\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\lib\NLPUtil\include\SentenceToWord.h">
+      <Filter>common\lib\NLPUtil\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\util\StringUtil.h">
+      <Filter>common\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\data_vector.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="StreamWriter.h" />
+    <ClInclude Include="..\common\util\FileUtil.h">
+      <Filter>common\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\tensor\tensor_shape.h">
+      <Filter>common\tensor</Filter>
+    </ClInclude>
+    <ClInclude Include="model\AbstractProducerModel.h">
+      <Filter>model</Filter>
+    </ClInclude>
+    <ClInclude Include="model\CifarProducerModel.h">
+      <Filter>model</Filter>
+    </ClInclude>
+    <ClInclude Include="model\DataProviderModel.h">
+      <Filter>model</Filter>
+    </ClInclude>
+    <ClInclude Include="model\ImageFileProducerModel.h">
+      <Filter>model</Filter>
+    </ClInclude>
+    <ClInclude Include="model\IncreasePredictProducerModel.h">
+      <Filter>model</Filter>
+    </ClInclude>
+    <ClInclude Include="model\MnistProducerModel.h">
+      <Filter>model</Filter>
+    </ClInclude>
+    <ClInclude Include="model\NumericProducerModel.h">
+      <Filter>model</Filter>
+    </ClInclude>
+    <ClInclude Include="model\WindllProducerModel.h">
+      <Filter>model</Filter>
+    </ClInclude>
+    <ClInclude Include="reader\DataPreloadBuffer.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="reader\DataProvider.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="reader\DataSourceCachedBuffer.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="reader\NeuroDataFormatProducer.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="reader\AbstractProducer.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="model\BinaryReaderModel.h">
+      <Filter>model</Filter>
+    </ClInclude>
+    <ClInclude Include="model\AbstractReaderModel.h">
+      <Filter>model</Filter>
+    </ClInclude>
+    <ClInclude Include="model\TextReaderModel.h">
+      <Filter>model</Filter>
+    </ClInclude>
+    <ClInclude Include="reader\DataReaderSet.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="reader\TextReader.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\util\StringDataFormat.h">
+      <Filter>common\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\util\JobSignal.h">
+      <Filter>common\util</Filter>
+    </ClInclude>
+    <ClInclude Include="reader\ImageFileProducer.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="reader\NlpProducer.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="reader\MnistProducer.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="reader\WindllProducer.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="model\NlpProducerModel.h">
+      <Filter>model</Filter>
+    </ClInclude>
+    <ClInclude Include="reader\BinaryReader.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="reader\AbstractReader.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="reader\AbstractPreprocessor.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="reader\NumericProducer.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="model\AbstractPreprocessorModel.h">
+      <Filter>model</Filter>
+    </ClInclude>
+    <ClInclude Include="model\PreprocessorModelIncludeHeader.h">
+      <Filter>model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\NetworkBindingModel.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\gui\win32\WinFileUtil.h">
+      <Filter>common\gui\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="reader\DataSourceNameVector.h">
+      <Filter>reader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\dp\OneHotEncoder.h">
+      <Filter>common\dp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\dp\TextInputStream.h">
+      <Filter>common\dp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\dp\TextParsingReader.h">
+      <Filter>common\dp</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="common">
+      <UniqueIdentifier>{1b9c818a-3e00-44c8-8ce4-b0f8695a7a87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\storage">
+      <UniqueIdentifier>{1b4b3f29-0347-419c-a3a4-1ed512830346}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\util">
+      <UniqueIdentifier>{3396ffcc-121b-4f8d-bf09-782022b2974c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\gui">
+      <UniqueIdentifier>{dfee2e05-62bb-42ba-8068-a028982dd585}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\gui\win32">
+      <UniqueIdentifier>{7595b94c-ab74-4688-9969-c5db4ef9d7bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\lib">
+      <UniqueIdentifier>{2934a7ba-7b5f-465f-b1fe-bec331b94ed0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\lib\NLPUtil">
+      <UniqueIdentifier>{2f37b480-8895-4474-9fb7-7c0620f71186}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\lib\NLPUtil\include">
+      <UniqueIdentifier>{fd8a93c9-b4d2-4916-bced-c776b53c15ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\tensor">
+      <UniqueIdentifier>{79647e00-4472-4b0a-87d3-8cb6e2b3047a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="model">
+      <UniqueIdentifier>{11a5861a-9f6b-4814-95c0-26833e123b42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="reader">
+      <UniqueIdentifier>{54fd47cb-9572-4a91-9332-8f22d12ed469}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\dp">
+      <UniqueIdentifier>{f3534215-99bd-4991-930d-5c2d50598456}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug Train|x64">
+      <Configuration>Debug Train</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A6EDA44D-7251-4DFF-9B43-BFE12B93C4BA}</ProjectGuid>
+    <RootNamespace>NeuroMemorySystem</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Train|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 9.0.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug Train|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(Configuration) $(Platform)\</OutDir>
+    <IntDir>$(Configuration) $(Platform)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Train|x64'">
+    <OutDir>$(Configuration) $(Platform)\</OutDir>
+    <IntDir>$(Configuration) $(Platform)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(Configuration) $(Platform)\</OutDir>
+    <IntDir>$(Configuration) $(Platform)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../common;../;./;$(CudaToolkitIncludeDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_DEBUG;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+    </ClCompile>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <CodeGeneration>compute_30,sm_30</CodeGeneration>
+      <CudaRuntime>Shared</CudaRuntime>
+    </CudaCompile>
+    <Lib>
+      <AdditionalDependencies>cudart.lib;curand.lib;cublas.lib;cudnn.lib;libopenblas.dll.a</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>$(CudaToolkitLibDir);../common/3rd-party/cudnn-9.1-win10-x64-v7/lib/x64;../common/3rd-party/openblas-v0.2.19-64/lib</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Train|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../common;../;./;$(CudaToolkitIncludeDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_DEBUG;_DEBUG_TRAIN;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>$(CudaToolkitLibDir);../../common/3rd-party/cudnn-9.1-win10-x64-v7/lib/x64;../../common/3rd-party/openblas-v0.2.19-64/lib</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>../common;../;./;$(CudaToolkitIncludeDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>$(CudaToolkitLibDir);../common/3rd-party/cudnn-9.1-win10-x64-v7/lib/x64;../common/3rd-party/openblas-v0.2.19-64/lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>cudart.lib;curand.lib;cublas.lib;cudnn.lib;libopenblas.dll.a</AdditionalDependencies>
+    </Lib>
+    <CudaCompile>
+      <CudaRuntime>Shared</CudaRuntime>
+    </CudaCompile>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\common\core\cuda_platform.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Train|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\common\core\MathCoreApi.cpp" />
+    <ClCompile Include="..\common\core\MathCpuCore.cpp" />
+    <ClCompile Include="..\common\core\MemoryManager.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Train|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\common\storage\FileDeviceAdaptor.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Train|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\common\storage\MemoryDeviceAdaptor.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Train|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\common\storage\MMFDeviceAdaptor.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Train|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\common\util\LogFileWriter.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Train|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\common\util\np_util.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Train|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="engine\backend\cpu\cpu_activations.cpp" />
+    <ClCompile Include="engine\backend\cpu\cpu_loss_function.cpp" />
+    <ClCompile Include="engine\backend\cpu\cpu_optimizer.cpp" />
+    <ClCompile Include="engine\backend\optimizer.cpp" />
+    <ClCompile Include="engine\layers\AbstractLayerEngine.cpp" />
+    <ClCompile Include="engine\layers\BatchNormLayerEngine.cpp" />
+    <ClCompile Include="engine\layers\ConcatLayerEngine.cpp" />
+    <ClCompile Include="engine\layers\ConvLayerEngine.cpp" />
+    <ClCompile Include="engine\layers\ConvLayerEngineBase.cpp" />
+    <ClCompile Include="engine\layers\DropouLayerCpuEngine.cpp" />
+    <ClCompile Include="engine\layers\DropoutLayerEngine.cpp" />
+    <ClCompile Include="engine\layers\FcLayerEngine.cpp" />
+    <ClCompile Include="engine\layers\HiddenLayerEngine.cpp" />
+    <ClCompile Include="engine\layers\LstmLayerCpuEngine.cpp" />
+    <ClCompile Include="engine\layers\LstmLayerEngine.cpp" />
+    <ClCompile Include="engine\layers\OutputLayerEngine.cpp" />
+    <ClCompile Include="engine\layers\PoolingLayerCpuEngine.cpp" />
+    <ClCompile Include="engine\layers\PoolingLayerEngine.cpp" />
+    <ClCompile Include="engine\layers\RecurrentLayerEngine.cpp" />
+    <ClCompile Include="engine\LayerWeightInit.cpp" />
+    <ClCompile Include="engine\MiniBatchGenerator.cpp" />
+    <ClCompile Include="engine\NeuralNetworkEngine.cpp" />
+    <ClCompile Include="engine\NeuralNetworkPredictor.cpp" />
+    <ClCompile Include="engine\NeuralNetworkProcessor.cpp" />
+    <ClCompile Include="engine\NeuralNetworkTrainer.cpp" />
+    <ClCompile Include="engine\SharedDataBuffers.cpp" />
+    <ClCompile Include="engine\WeightStoreManager.cpp" />
+    <CudaCompile Include="..\common\core\MathGpuCore.cu" />
+    <CudaCompile Include="engine\backend\cuda\cuda_activations.cu" />
+    <CudaCompile Include="engine\backend\cuda\cuda_loss_function.cu" />
+    <CudaCompile Include="engine\backend\cuda\cuda_optimizer.cu" />
+    <CudaCompile Include="engine\layers\ConcatLayerCudaEngine.cu" />
+    <CudaCompile Include="engine\layers\ConvLayerCudnnEngine.cu" />
+    <CudaCompile Include="engine\layers\DropoutLayerCudaEngine.cu" />
+    <CudaCompile Include="engine\layers\LstmLayerCudaEngine.cu" />
+    <CudaCompile Include="engine\layers\PoolingLayerCudaEngine.cu" />
+    <ClCompile Include="network\AbstractLayer.cpp" />
+    <ClCompile Include="network\ConcatLayerConfigure.cpp" />
+    <ClCompile Include="network\ConvLayerConfigure.cpp" />
+    <ClCompile Include="network\HiddenLayer.cpp" />
+    <ClCompile Include="network\NeuralNetwork.cpp" />
+    <ClCompile Include="network\OutputLayer.cpp" />
+    <ClCompile Include="network\RnnLayerConfigure.cpp" />
+    <ClCompile Include="network\writer\HiddenLayerWriter.cpp" />
+    <ClCompile Include="nsas\NeuroDataAccessManager.cpp" />
+    <ClCompile Include="nsas\NeuroDataSpecDecrease.cpp" />
+    <ClCompile Include="nsas\NeuroDataSpecIncrease.cpp" />
+    <ClCompile Include="nsas\NeuroDataSpecModify.cpp" />
+    <ClCompile Include="nsas\NeuroDataSpecTreeSearch.cpp" />
+    <ClCompile Include="nsas\NeuroEntryAccess.cpp" />
+    <ClCompile Include="nsas\NeuroStorageAllocationSystem.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Train|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\common\common.h" />
+    <ClInclude Include="..\common\core\filter_calc.h" />
+    <ClInclude Include="..\common\core\MathCoreApi.h" />
+    <ClInclude Include="..\common\core\cuda_platform.h" />
+    <ClInclude Include="..\common\core\MathCpuCore.h" />
+    <ClInclude Include="..\common\core\MathGpuCore.h" />
+    <ClInclude Include="..\common\core\math_device.h" />
+    <ClInclude Include="..\common\core\MemoryManager.h" />
+    <ClInclude Include="..\common\data_vector.h" />
+    <ClInclude Include="..\common\NetworkBindingModel.h" />
+    <ClInclude Include="..\common\np_types.h" />
+    <ClInclude Include="..\common\storage\DeviceAdaptor.h" />
+    <ClInclude Include="..\common\storage\FileDeviceAdaptor.h" />
+    <ClInclude Include="..\common\storage\MemoryDeviceAdaptor.h" />
+    <ClInclude Include="..\common\storage\MMFDeviceAdaptor.h" />
+    <ClInclude Include="..\common\tensor\tensor_data.h" />
+    <ClInclude Include="..\common\tensor\tensor_shape.h" />
+    <ClInclude Include="..\common\util\cpu_parallel_for.h" />
+    <ClInclude Include="..\common\util\LogFileWriter.h" />
+    <ClInclude Include="..\common\util\np_util.h" />
+    <ClInclude Include="..\common\util\randoms.h" />
+    <ClInclude Include="..\common\util\UniqueIdFactory.h" />
+    <ClInclude Include="engine\backend\activations.h" />
+    <ClInclude Include="engine\backend\cpu\cpu_activations.h" />
+    <ClInclude Include="engine\backend\cpu\cpu_loss_function.h" />
+    <ClInclude Include="engine\backend\cpu\cpu_optimizer.h" />
+    <ClInclude Include="engine\backend\cuda\cuda_activations.h" />
+    <ClInclude Include="engine\backend\cuda\cuda_loss_function.h" />
+    <ClInclude Include="engine\backend\cuda\cuda_optimizer.h" />
+    <ClInclude Include="engine\backend\loss_function.h" />
+    <ClInclude Include="engine\backend\optimizer.h" />
+    <ClInclude Include="engine\backend\weight_init.h" />
+    <ClInclude Include="engine\LayerData.h" />
+    <ClInclude Include="engine\layers\AbstractLayerEngine.h" />
+    <ClInclude Include="engine\layers\BatchNormLayerEngine.h" />
+    <ClInclude Include="engine\layers\ConcatLayerCudaEngine.h" />
+    <ClInclude Include="engine\layers\ConcatLayerEngine.h" />
+    <ClInclude Include="engine\layers\ConvLayerCudnnEngine.h" />
+    <ClInclude Include="engine\layers\ConvLayerEngine.h" />
+    <ClInclude Include="engine\layers\ConvLayerEngineBase.h" />
+    <ClInclude Include="engine\layers\DropouLayerCpuEngine.h" />
+    <ClInclude Include="engine\layers\DropoutLayerCudaEngine.h" />
+    <ClInclude Include="engine\layers\DropoutLayerEngine.h" />
+    <ClInclude Include="engine\layers\FcLayerEngine.h" />
+    <ClInclude Include="engine\layers\HiddenLayerEngine.h" />
+    <ClInclude Include="engine\layers\LstmLayerCpuEngine.h" />
+    <ClInclude Include="engine\layers\LstmLayerCudaEngine.h" />
+    <ClInclude Include="engine\layers\LstmLayerEngine.h" />
+    <ClInclude Include="engine\layers\OutputLayerEngine.h" />
+    <ClInclude Include="engine\layers\PoolingLayerCpuEngine.h" />
+    <ClInclude Include="engine\layers\PoolingLayerCudaEngine.h" />
+    <ClInclude Include="engine\layers\PoolingLayerEngine.h" />
+    <ClInclude Include="engine\layers\RecurrentLayerEngine.h" />
+    <ClInclude Include="engine\LayerWeightInit.h" />
+    <ClInclude Include="engine\MiniBatchGenerator.h" />
+    <ClInclude Include="engine\NetworkParameter.h" />
+    <ClInclude Include="engine\NeuralNetworkEngine.h" />
+    <ClInclude Include="engine\NeuralNetworkPredictor.h" />
+    <ClInclude Include="engine\NeuralNetworkProcessor.h" />
+    <ClInclude Include="engine\NeuralNetworkTrainer.h" />
+    <ClInclude Include="engine\SharedDataBuffers.h" />
+    <ClInclude Include="engine\TrainFunctions.h" />
+    <ClInclude Include="engine\WeightStoreManager.h" />
+    <ClInclude Include="network\AbstractLayer.h" />
+    <ClInclude Include="network\BnLayerConfigure.h" />
+    <ClInclude Include="network\ConcatLayerConfigure.h" />
+    <ClInclude Include="network\ConvLayerConfigure.h" />
+    <ClInclude Include="network\DropoutLayerConfigure.h" />
+    <ClInclude Include="network\FcLayerConfigure.h" />
+    <ClInclude Include="network\HiddenLayer.h" />
+    <ClInclude Include="network\HiddenLayerConfigure.h" />
+    <ClInclude Include="network\InputLayer.h" />
+    <ClInclude Include="network\LayerIncludeHeader.h" />
+    <ClInclude Include="network\loader\HiddenLayerLoader.h" />
+    <ClInclude Include="network\loader\InputLayerLoader.h" />
+    <ClInclude Include="network\loader\NeuralNetworkLoader.h" />
+    <ClInclude Include="network\NeuralNetwork.h" />
+    <ClInclude Include="network\NeuralNetworkTypes.h" />
+    <ClInclude Include="network\OutputLayer.h" />
+    <ClInclude Include="network\PoolLayerConfigure.h" />
+    <ClInclude Include="network\RnnLayerConfigure.h" />
+    <ClInclude Include="network\writer\HiddenLayerWriter.h" />
+    <ClInclude Include="network\writer\InputLayerWriter.h" />
+    <ClInclude Include="network\writer\NeuralNetworkWriter.h" />
+    <ClInclude Include="nsas\DataProviderEntrySpec.h" />
+    <ClInclude Include="nsas\NeuralNetworkEntrySpec.h" />
+    <ClInclude Include="nsas\NeuroDataAccessManager.h" />
+    <ClInclude Include="nsas\NeuroDataAllocSpec.h" />
+    <ClInclude Include="nsas\NeuroDataSpecDecrease.h" />
+    <ClInclude Include="nsas\NeuroDataSpecIncrease.h" />
+    <ClInclude Include="nsas\NeuroDataSpecModify.h" />
+    <ClInclude Include="nsas\NeuroDataSpecTreeSearch.h" />
+    <ClInclude Include="nsas\NeuroEntryAccess.h" />
+    <ClInclude Include="nsas\NeuroStorageAllocationSystem.h" />
+    <ClInclude Include="nsas\NeuroStorageAllocationTableSpec.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NeuroData\NeuroData.vcxproj">
+      <Project>{ef0507a9-7aa7-4952-a0ef-5cb954ea7f0b}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 9.0.targets" />
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="NeuroKernel.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

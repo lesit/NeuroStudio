@@ -1,0 +1,521 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="nsas\NeuroDataAccessManager.cpp">
+      <Filter>nsas</Filter>
+    </ClCompile>
+    <ClCompile Include="nsas\NeuroDataSpecModify.cpp">
+      <Filter>nsas</Filter>
+    </ClCompile>
+    <ClCompile Include="nsas\NeuroStorageAllocationSystem.cpp">
+      <Filter>nsas</Filter>
+    </ClCompile>
+    <ClCompile Include="nsas\NeuroDataSpecDecrease.cpp">
+      <Filter>nsas</Filter>
+    </ClCompile>
+    <ClCompile Include="nsas\NeuroDataSpecIncrease.cpp">
+      <Filter>nsas</Filter>
+    </ClCompile>
+    <ClCompile Include="nsas\NeuroDataSpecTreeSearch.cpp">
+      <Filter>nsas</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\core\cuda_platform.cpp">
+      <Filter>common\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\core\MemoryManager.cpp">
+      <Filter>common\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\storage\FileDeviceAdaptor.cpp">
+      <Filter>common\storage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\storage\MemoryDeviceAdaptor.cpp">
+      <Filter>common\storage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\storage\MMFDeviceAdaptor.cpp">
+      <Filter>common\storage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\util\LogFileWriter.cpp">
+      <Filter>common\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\util\np_util.cpp">
+      <Filter>common\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\core\MathCpuCore.cpp">
+      <Filter>common\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\core\MathCoreApi.cpp">
+      <Filter>common\core</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\backend\cpu\cpu_activations.cpp">
+      <Filter>engine\backend\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\backend\cpu\cpu_loss_function.cpp">
+      <Filter>engine\backend\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\backend\cpu\cpu_optimizer.cpp">
+      <Filter>engine\backend\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\backend\optimizer.cpp">
+      <Filter>engine\backend</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\layers\AbstractLayerEngine.cpp">
+      <Filter>engine\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\layers\BatchNormLayerEngine.cpp">
+      <Filter>engine\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\layers\ConcatLayerEngine.cpp">
+      <Filter>engine\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\layers\ConvLayerEngine.cpp">
+      <Filter>engine\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\layers\ConvLayerEngineBase.cpp">
+      <Filter>engine\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\layers\DropouLayerCpuEngine.cpp">
+      <Filter>engine\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\layers\DropoutLayerEngine.cpp">
+      <Filter>engine\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\layers\FcLayerEngine.cpp">
+      <Filter>engine\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\layers\HiddenLayerEngine.cpp">
+      <Filter>engine\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\layers\LstmLayerCpuEngine.cpp">
+      <Filter>engine\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\layers\LstmLayerEngine.cpp">
+      <Filter>engine\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\layers\PoolingLayerCpuEngine.cpp">
+      <Filter>engine\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\layers\PoolingLayerEngine.cpp">
+      <Filter>engine\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\layers\RecurrentLayerEngine.cpp">
+      <Filter>engine\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\MiniBatchGenerator.cpp">
+      <Filter>engine</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\NeuralNetworkEngine.cpp">
+      <Filter>engine</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\NeuralNetworkTrainer.cpp">
+      <Filter>engine</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\SharedDataBuffers.cpp">
+      <Filter>engine</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\WeightStoreManager.cpp">
+      <Filter>engine</Filter>
+    </ClCompile>
+    <ClCompile Include="network\writer\HiddenLayerWriter.cpp">
+      <Filter>network\writer</Filter>
+    </ClCompile>
+    <ClCompile Include="network\AbstractLayer.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="network\HiddenLayer.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="network\NeuralNetwork.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\NeuralNetworkProcessor.cpp">
+      <Filter>engine</Filter>
+    </ClCompile>
+    <ClCompile Include="nsas\NeuroEntryAccess.cpp">
+      <Filter>nsas</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\LayerWeightInit.cpp">
+      <Filter>engine</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\layers\OutputLayerEngine.cpp">
+      <Filter>engine\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="network\ConcatLayerConfigure.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="network\ConvLayerConfigure.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="network\RnnLayerConfigure.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="network\OutputLayer.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\NeuralNetworkPredictor.cpp">
+      <Filter>engine</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="nsas\NeuroDataAccessManager.h">
+      <Filter>nsas</Filter>
+    </ClInclude>
+    <ClInclude Include="nsas\NeuroDataAllocSpec.h">
+      <Filter>nsas</Filter>
+    </ClInclude>
+    <ClInclude Include="nsas\NeuroDataSpecModify.h">
+      <Filter>nsas</Filter>
+    </ClInclude>
+    <ClInclude Include="nsas\NeuroStorageAllocationSystem.h">
+      <Filter>nsas</Filter>
+    </ClInclude>
+    <ClInclude Include="nsas\NeuroStorageAllocationTableSpec.h">
+      <Filter>nsas</Filter>
+    </ClInclude>
+    <ClInclude Include="nsas\NeuroDataSpecDecrease.h">
+      <Filter>nsas</Filter>
+    </ClInclude>
+    <ClInclude Include="nsas\NeuroDataSpecIncrease.h">
+      <Filter>nsas</Filter>
+    </ClInclude>
+    <ClInclude Include="nsas\NeuroDataSpecTreeSearch.h">
+      <Filter>nsas</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\core\cuda_platform.h">
+      <Filter>common\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\core\MemoryManager.h">
+      <Filter>common\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\storage\MMFDeviceAdaptor.h">
+      <Filter>common\storage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\storage\DeviceAdaptor.h">
+      <Filter>common\storage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\storage\FileDeviceAdaptor.h">
+      <Filter>common\storage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\storage\MemoryDeviceAdaptor.h">
+      <Filter>common\storage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\tensor\tensor_data.h">
+      <Filter>common\tensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\tensor\tensor_shape.h">
+      <Filter>common\tensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\util\cpu_parallel_for.h">
+      <Filter>common\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\util\LogFileWriter.h">
+      <Filter>common\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\util\np_util.h">
+      <Filter>common\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\util\randoms.h">
+      <Filter>common\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\util\UniqueIdFactory.h">
+      <Filter>common\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\common.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\data_vector.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\np_types.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\core\MathCpuCore.h">
+      <Filter>common\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\core\MathGpuCore.h">
+      <Filter>common\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\core\MathCoreApi.h">
+      <Filter>common\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\core\math_device.h">
+      <Filter>common\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\core\filter_calc.h">
+      <Filter>common\core</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\backend\cpu\cpu_activations.h">
+      <Filter>engine\backend\cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\backend\cpu\cpu_loss_function.h">
+      <Filter>engine\backend\cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\backend\cpu\cpu_optimizer.h">
+      <Filter>engine\backend\cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\backend\cuda\cuda_activations.h">
+      <Filter>engine\backend\cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\backend\cuda\cuda_loss_function.h">
+      <Filter>engine\backend\cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\backend\cuda\cuda_optimizer.h">
+      <Filter>engine\backend\cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\backend\activations.h">
+      <Filter>engine\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\backend\loss_function.h">
+      <Filter>engine\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\backend\optimizer.h">
+      <Filter>engine\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\layers\AbstractLayerEngine.h">
+      <Filter>engine\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\layers\BatchNormLayerEngine.h">
+      <Filter>engine\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\layers\ConcatLayerCudaEngine.h">
+      <Filter>engine\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\layers\ConcatLayerEngine.h">
+      <Filter>engine\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\layers\ConvLayerCudnnEngine.h">
+      <Filter>engine\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\layers\ConvLayerEngine.h">
+      <Filter>engine\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\layers\ConvLayerEngineBase.h">
+      <Filter>engine\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\layers\DropouLayerCpuEngine.h">
+      <Filter>engine\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\layers\DropoutLayerCudaEngine.h">
+      <Filter>engine\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\layers\DropoutLayerEngine.h">
+      <Filter>engine\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\layers\FcLayerEngine.h">
+      <Filter>engine\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\layers\HiddenLayerEngine.h">
+      <Filter>engine\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\layers\LstmLayerCpuEngine.h">
+      <Filter>engine\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\layers\LstmLayerCudaEngine.h">
+      <Filter>engine\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\layers\LstmLayerEngine.h">
+      <Filter>engine\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\layers\PoolingLayerCpuEngine.h">
+      <Filter>engine\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\layers\PoolingLayerCudaEngine.h">
+      <Filter>engine\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\layers\PoolingLayerEngine.h">
+      <Filter>engine\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\layers\RecurrentLayerEngine.h">
+      <Filter>engine\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\MiniBatchGenerator.h">
+      <Filter>engine</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\NetworkParameter.h">
+      <Filter>engine</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\NeuralNetworkEngine.h">
+      <Filter>engine</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\NeuralNetworkTrainer.h">
+      <Filter>engine</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\SharedDataBuffers.h">
+      <Filter>engine</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\TrainFunctions.h">
+      <Filter>engine</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\WeightStoreManager.h">
+      <Filter>engine</Filter>
+    </ClInclude>
+    <ClInclude Include="network\loader\HiddenLayerLoader.h">
+      <Filter>network\loader</Filter>
+    </ClInclude>
+    <ClInclude Include="network\loader\InputLayerLoader.h">
+      <Filter>network\loader</Filter>
+    </ClInclude>
+    <ClInclude Include="network\loader\NeuralNetworkLoader.h">
+      <Filter>network\loader</Filter>
+    </ClInclude>
+    <ClInclude Include="network\writer\HiddenLayerWriter.h">
+      <Filter>network\writer</Filter>
+    </ClInclude>
+    <ClInclude Include="network\writer\InputLayerWriter.h">
+      <Filter>network\writer</Filter>
+    </ClInclude>
+    <ClInclude Include="network\writer\NeuralNetworkWriter.h">
+      <Filter>network\writer</Filter>
+    </ClInclude>
+    <ClInclude Include="network\AbstractLayer.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="network\HiddenLayer.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="network\NeuralNetwork.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="network\InputLayer.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\NeuralNetworkProcessor.h">
+      <Filter>engine</Filter>
+    </ClInclude>
+    <ClInclude Include="nsas\DataProviderEntrySpec.h">
+      <Filter>nsas</Filter>
+    </ClInclude>
+    <ClInclude Include="nsas\NeuralNetworkEntrySpec.h">
+      <Filter>nsas</Filter>
+    </ClInclude>
+    <ClInclude Include="nsas\NeuroEntryAccess.h">
+      <Filter>nsas</Filter>
+    </ClInclude>
+    <ClInclude Include="network\NeuralNetworkTypes.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\backend\weight_init.h">
+      <Filter>engine\backend</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\LayerWeightInit.h">
+      <Filter>engine</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\layers\OutputLayerEngine.h">
+      <Filter>engine\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="network\ConcatLayerConfigure.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="network\ConvLayerConfigure.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="network\DropoutLayerConfigure.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="network\FcLayerConfigure.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="network\PoolLayerConfigure.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="network\RnnLayerConfigure.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="network\BnLayerConfigure.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="network\HiddenLayerConfigure.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="network\OutputLayer.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="network\LayerIncludeHeader.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\NetworkBindingModel.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\NeuralNetworkPredictor.h">
+      <Filter>engine</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\LayerData.h">
+      <Filter>engine</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="nsas">
+      <UniqueIdentifier>{c199e037-aec1-41bc-9af3-9e2caaf0086b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="network">
+      <UniqueIdentifier>{0694d214-88b2-4981-a23f-9bb5982549ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{271c1658-508f-41f4-8ab9-cbd1dfa67aa0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\storage">
+      <UniqueIdentifier>{5448c711-0f53-4faf-ba35-6bb050834d8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\util">
+      <UniqueIdentifier>{3e09859b-7397-4f75-96da-ff7b3be1379c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\core">
+      <UniqueIdentifier>{b9d84c17-c292-46c8-8317-e9a1e988c671}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\tensor">
+      <UniqueIdentifier>{7820ab42-2a4c-4ab1-9c83-f45f7282a3a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="engine">
+      <UniqueIdentifier>{4d4f39b4-d785-4c43-9e17-cbad0dcc2242}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="engine\backend">
+      <UniqueIdentifier>{9d52f98e-402f-417b-ab81-2ac1445adfd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="engine\layers">
+      <UniqueIdentifier>{112d5c63-740d-49a0-b75a-ac306cdc6d55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="engine\backend\cpu">
+      <UniqueIdentifier>{15aff0e2-b6b7-4a2d-b644-b98e9d6182ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="engine\backend\cuda">
+      <UniqueIdentifier>{bc4aa047-718b-4ec3-994a-c0dbc563b50b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="network\loader">
+      <UniqueIdentifier>{f5f9e7eb-d536-47be-a9d6-2c4667bff082}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="network\writer">
+      <UniqueIdentifier>{7ae648e0-530a-4dbe-871c-0435a7ad98c4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="..\common\core\MathGpuCore.cu">
+      <Filter>common\core</Filter>
+    </CudaCompile>
+    <CudaCompile Include="engine\backend\cuda\cuda_activations.cu">
+      <Filter>engine\backend\cuda</Filter>
+    </CudaCompile>
+    <CudaCompile Include="engine\backend\cuda\cuda_loss_function.cu">
+      <Filter>engine\backend\cuda</Filter>
+    </CudaCompile>
+    <CudaCompile Include="engine\backend\cuda\cuda_optimizer.cu">
+      <Filter>engine\backend\cuda</Filter>
+    </CudaCompile>
+    <CudaCompile Include="engine\layers\ConcatLayerCudaEngine.cu">
+      <Filter>engine\layers</Filter>
+    </CudaCompile>
+    <CudaCompile Include="engine\layers\ConvLayerCudnnEngine.cu">
+      <Filter>engine\layers</Filter>
+    </CudaCompile>
+    <CudaCompile Include="engine\layers\DropoutLayerCudaEngine.cu">
+      <Filter>engine\layers</Filter>
+    </CudaCompile>
+    <CudaCompile Include="engine\layers\LstmLayerCudaEngine.cu">
+      <Filter>engine\layers</Filter>
+    </CudaCompile>
+    <CudaCompile Include="engine\layers\PoolingLayerCudaEngine.cu">
+      <Filter>engine\layers</Filter>
+    </CudaCompile>
+  </ItemGroup>
+</Project>

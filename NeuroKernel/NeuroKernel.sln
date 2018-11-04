@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NeuroKernel", "NeuroKernel.vcproj", "{A6EDA44D-7251-4DFF-9B43-BFE12B93C4BA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NeuroKernelTest", "NeuroKernelTest\NeuroKernelTest.vcproj", "{8C91DF65-6C18-4107-9016-FBB511E53C25}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A6EDA44D-7251-4DFF-9B43-BFE12B93C4BA} = {A6EDA44D-7251-4DFF-9B43-BFE12B93C4BA}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug Data Alloc Test|Win32 = Debug Data Alloc Test|Win32
+		Debug Data Alloc Test|x64 = Debug Data Alloc Test|x64
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6EDA44D-7251-4DFF-9B43-BFE12B93C4BA}.Debug Data Alloc Test|Win32.ActiveCfg = Debug Data Alloc Test|Win32
+		{A6EDA44D-7251-4DFF-9B43-BFE12B93C4BA}.Debug Data Alloc Test|Win32.Build.0 = Debug Data Alloc Test|Win32
+		{A6EDA44D-7251-4DFF-9B43-BFE12B93C4BA}.Debug Data Alloc Test|x64.ActiveCfg = Debug Data Alloc Test|x64
+		{A6EDA44D-7251-4DFF-9B43-BFE12B93C4BA}.Debug Data Alloc Test|x64.Build.0 = Debug Data Alloc Test|x64
+		{A6EDA44D-7251-4DFF-9B43-BFE12B93C4BA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A6EDA44D-7251-4DFF-9B43-BFE12B93C4BA}.Debug|Win32.Build.0 = Debug|Win32
+		{A6EDA44D-7251-4DFF-9B43-BFE12B93C4BA}.Debug|x64.ActiveCfg = Debug|x64
+		{A6EDA44D-7251-4DFF-9B43-BFE12B93C4BA}.Debug|x64.Build.0 = Debug|x64
+		{A6EDA44D-7251-4DFF-9B43-BFE12B93C4BA}.Release|Win32.ActiveCfg = Release|Win32
+		{A6EDA44D-7251-4DFF-9B43-BFE12B93C4BA}.Release|Win32.Build.0 = Release|Win32
+		{A6EDA44D-7251-4DFF-9B43-BFE12B93C4BA}.Release|x64.ActiveCfg = Release|x64
+		{A6EDA44D-7251-4DFF-9B43-BFE12B93C4BA}.Release|x64.Build.0 = Release|x64
+		{8C91DF65-6C18-4107-9016-FBB511E53C25}.Debug Data Alloc Test|Win32.ActiveCfg = Debug Data Alloc Test|Win32
+		{8C91DF65-6C18-4107-9016-FBB511E53C25}.Debug Data Alloc Test|Win32.Build.0 = Debug Data Alloc Test|Win32
+		{8C91DF65-6C18-4107-9016-FBB511E53C25}.Debug Data Alloc Test|x64.ActiveCfg = Debug Data Alloc Test|x64
+		{8C91DF65-6C18-4107-9016-FBB511E53C25}.Debug Data Alloc Test|x64.Build.0 = Debug Data Alloc Test|x64
+		{8C91DF65-6C18-4107-9016-FBB511E53C25}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8C91DF65-6C18-4107-9016-FBB511E53C25}.Debug|Win32.Build.0 = Debug|Win32
+		{8C91DF65-6C18-4107-9016-FBB511E53C25}.Debug|x64.ActiveCfg = Debug|x64
+		{8C91DF65-6C18-4107-9016-FBB511E53C25}.Debug|x64.Build.0 = Debug|x64
+		{8C91DF65-6C18-4107-9016-FBB511E53C25}.Release|Win32.ActiveCfg = Release|Win32
+		{8C91DF65-6C18-4107-9016-FBB511E53C25}.Release|Win32.Build.0 = Release|Win32
+		{8C91DF65-6C18-4107-9016-FBB511E53C25}.Release|x64.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

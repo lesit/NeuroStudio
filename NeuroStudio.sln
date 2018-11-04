@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NeuroStudio", "NeuroStudio\impl\Win32\NeuroStudio.vcxproj", "{0A692163-33EE-4036-B9D2-64E8F7350988}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NeuroData", "NeuroData\NeuroData.vcxproj", "{EF0507A9-7AA7-4952-A0EF-5CB954EA7F0B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NeuroKernel", "NeuroKernel\NeuroKernel.vcxproj", "{A6EDA44D-7251-4DFF-9B43-BFE12B93C4BA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EF0507A9-7AA7-4952-A0EF-5CB954EA7F0B} = {EF0507A9-7AA7-4952-A0EF-5CB954EA7F0B}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A692163-33EE-4036-B9D2-64E8F7350988}.Debug|x64.ActiveCfg = Debug|x64
+		{0A692163-33EE-4036-B9D2-64E8F7350988}.Debug|x64.Build.0 = Debug|x64
+		{0A692163-33EE-4036-B9D2-64E8F7350988}.Release|x64.ActiveCfg = Release|x64
+		{0A692163-33EE-4036-B9D2-64E8F7350988}.Release|x64.Build.0 = Release|x64
+		{EF0507A9-7AA7-4952-A0EF-5CB954EA7F0B}.Debug|x64.ActiveCfg = Debug|x64
+		{EF0507A9-7AA7-4952-A0EF-5CB954EA7F0B}.Debug|x64.Build.0 = Debug|x64
+		{EF0507A9-7AA7-4952-A0EF-5CB954EA7F0B}.Release|x64.ActiveCfg = Release|x64
+		{EF0507A9-7AA7-4952-A0EF-5CB954EA7F0B}.Release|x64.Build.0 = Release|x64
+		{A6EDA44D-7251-4DFF-9B43-BFE12B93C4BA}.Debug|x64.ActiveCfg = Debug|x64
+		{A6EDA44D-7251-4DFF-9B43-BFE12B93C4BA}.Debug|x64.Build.0 = Debug|x64
+		{A6EDA44D-7251-4DFF-9B43-BFE12B93C4BA}.Release|x64.ActiveCfg = Release|x64
+		{A6EDA44D-7251-4DFF-9B43-BFE12B93C4BA}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

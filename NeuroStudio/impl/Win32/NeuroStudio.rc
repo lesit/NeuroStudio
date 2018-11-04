@@ -1,0 +1,517 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Korean (Korea) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)\r\n"
+    "LANGUAGE 18, 1\r\n"
+    "#pragma code_page(949)\r\n"
+    "#include ""res\\NeuroStudio.rc2""  // Microsoft Visual C++ 이외의 다른 도구에서 편집한 리소스입니다.\r\n"
+    "#include ""l.KOR\\afxres.rc""          // 표준 구성 요소입니다.\r\n"
+    "#if !defined(_AFXDLL)\r\n"
+    "#include ""l.KOR\\afxprint.rc""                // 인쇄 미리 보기 리소스\r\n"
+    "#include ""l.KOR\\afxribbon.rc""               // MFC 리본 및 컨트롤 막대 리소스\r\n"
+    "#endif\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\NeuroStudio.ico"
+
+IDR_NeuroStockTYPE      ICON                    "res\\NeuroStudioDoc.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+IDR_MAINFRAME_256       BITMAP                  "res\\Toolbar256.bmp"
+
+IDB_1D_1SHAPE           BITMAP                  "..\\..\\img\\1d_1.bmp"
+
+IDB_1DSHAPE             BITMAP                  "..\\..\\img\\1d_shape.bmp"
+
+IDB_2DSHAPE             BITMAP                  "..\\..\\img\\2d_shape.bmp"
+
+IDB_3DSHAPE             BITMAP                  "..\\..\\img\\3d_shape.bmp"
+
+IDB_FULLY_PLANE         BITMAP                  "..\\..\\img\\fc_layer.bmp"
+
+IDB_CONV_PLANE          BITMAP                  "..\\..\\img\\conv_layer.bmp"
+
+IDB_POOL_PLANE          BITMAP                  "..\\..\\img\\pool_layer.bmp"
+
+IDB_DROPOUT_PLANE       BITMAP                  "..\\..\\img\\dropout_layer.bmp"
+
+IDB_RNN_PLANE           BITMAP                  "..\\..\\img\\rnn_layer.bmp"
+
+IDB_BN_PLANE            BITMAP                  "..\\..\\img\\batch_norm_layer.bmp"
+
+IDB_LRCN_PLANE          BITMAP                  "..\\..\\img\\lrcn_layer.bmp"
+
+IDB_CONCAT_PLANE        BITMAP                  "..\\..\\img\\concat_layer.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 16, 16
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+END
+
+IDR_MAINFRAME_256 TOOLBAR 16, 16
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    BUTTON      ID_NEURALNETWORK_OPEN
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "NeuroStudio"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,20,20
+    LTEXT           "NeuroStudio, version 0.1.0.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2017",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "확인",IDOK,113,41,50,14,WS_GROUP
+END
+
+IDD_SIMULATION DIALOGEX 0, 0, 653, 321
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Simulation"
+FONT 9, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "Train",IDC_RADIO_TRAIN,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,7,7,27,13
+    CONTROL         "Run",IDC_RADIO_RUN,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,49,7,27,13
+    CONTROL         "",IDC_TAB_SIM_DISPLAY,"SysTabControl32",WS_TABSTOP,130,7,516,307
+END
+
+IDD_IMAGE_TEST DIALOGEX 0, 0, 615, 362
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,499,341,50,14
+    PUSHBUTTON      "취소",IDCANCEL,558,341,50,14
+    PUSHBUTTON      "Undo",IDC_BUTTON_UNDO,341,341,50,14
+END
+
+IDD_SIM_TRAIN_SETUP DIALOGEX 0, 0, 170, 380
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_MAX_EPOCH,84,236,75,12,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT_BELOW_ERROR,84,253,75,12,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Analyze argmax accuracy",IDC_CHECK_ANALYZE_ARGMAX_ACCURACY,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,295,92,10
+    CONTROL         "Test after learn",IDC_CHECK_TEST_AFTER_LEARN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,324,66,10
+    EDITTEXT        IDC_EDIT_DISPLAY_PERIOD,84,358,75,12,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "Setup",IDC_STATIC_DATA,0,0,168,379
+    GROUPBOX        "End condition",IDC_STATIC_END_CONDITION,4,220,160,53
+    CONTROL         "Below error",IDC_CHECK_BELOW_ERROR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,255,53,10
+    LTEXT           "Display batch count",IDC_STATIC_DISPLAY_PERIOD,11,359,64,9,SS_CENTERIMAGE | NOT WS_GROUP
+    GROUPBOX        "Display",IDC_STATIC_DISPLAY,4,342,160,33
+    GROUPBOX        "Analyze",IDC_STATIC_ANALYSYS,4,279,160,59
+    LTEXT           "Max epoch",IDC_STATIC_MAX_EPOCH,14,237,52,9,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_BATCH_SIZE,84,192,75,12,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "Minibatch",IDC_STATIC_MINIBATCH_INFO,4,176,160,37
+    LTEXT           "Batch size",IDC_STATIC_BATCH_SIZE,14,194,52,9,SS_CENTERIMAGE
+    CONTROL         "Init weights",IDC_CHECK_INIT_WEIGHTS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,123,53,10
+    CONTROL         "Loss history in batch",IDC_CHECK_ANALYZE_LOSS_HISTORY,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,309,81,10
+    CONTROL         "Learn",IDC_RADIO_TRAIN_LEARN,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,8,10,31,14
+    CONTROL         "Test",IDC_RADIO_TRAIN_TEST,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,57,10,31,14
+    CONTROL         "Use ndf transform to speed up",IDC_CHECK_USE_NDF,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,141,114,10
+    CONTROL         "Set noises at data",IDC_CHECK_DATA_NOISING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,158,74,10
+END
+
+IDD_SIM_RUN_SETUP DIALOGEX 0, 0, 165, 326
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Files",IDC_RADIO_FILE,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,11,19,32,14
+    CONTROL         "Text",IDC_RADIO_TEXT,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,56,19,32,14
+    CONTROL         "Draw",IDC_RADIO_DRAW,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,101,19,32,14
+    GROUPBOX        "Setup",IDC_DATA_GROUP,0,0,165,295
+    EDITTEXT        IDC_EDIT_DISPLAY_PERIOD,84,276,75,12,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Display per batch",IDC_STATIC_DISPLAY_PERIOD,5,277,75,9,SS_CENTERIMAGE | NOT WS_GROUP
+    EDITTEXT        IDC_EDIT_OUTPUT_FILEPATH,81,188,75,12,ES_RIGHT | ES_AUTOHSCROLL
+    GROUPBOX        "Output",IDC_STATIC_OUTPUT,1,172,162,53
+    LTEXT           "File path",IDC_STATIC_FILE_PATH,11,189,52,9,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_BATCH_SIZE,80,248,75,12,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "Minibatch",IDC_STATIC_MINIBATCH_INFO,0,232,162,37
+    LTEXT           "Batch size",IDC_STATIC_BATCH_SIZE,10,250,52,9,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_OUTPUT_NO_PREFIX,81,207,75,12,ES_RIGHT | ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "no prefix",IDC_STATIC_NO_PREFIX,11,208,52,9,SS_CENTERIMAGE | NOT WS_VISIBLE
+END
+
+IDD_SIM_RUNNING DIALOGEX 0, 0, 270, 188
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,0,18,510
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041203b5"
+        BEGIN
+            VALUE "CompanyName", "Ainhuman(AI & Human)"
+            VALUE "FileDescription", "NeuroStudio"
+            VALUE "FileVersion", "2.0.18.510"
+            VALUE "InternalName", "NeuroStudio.exe"
+            VALUE "LegalCopyright", "Ainhuman.  All rights reserved."
+            VALUE "OriginalFilename", "NeuroStudio.exe"
+            VALUE "ProductName", "Neuro Studio"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x412, 949
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+    END
+
+    IDD_SIMULATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 646
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 314
+    END
+
+    IDD_IMAGE_TEST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 608
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 355
+    END
+
+    IDD_SIM_TRAIN_SETUP, DIALOG
+    BEGIN
+        RIGHTMARGIN, 168
+        BOTTOMMARGIN, 379
+    END
+
+    IDD_SIM_RUN_SETUP, DIALOG
+    BEGIN
+        RIGHTMARGIN, 163
+        BOTTOMMARGIN, 324
+    END
+
+    IDD_SIM_RUNNING, DIALOG
+    BEGIN
+        RIGHTMARGIN, 165
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_SIMULATION AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_SIM_TRAIN_SETUP AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_SIM_RUNNING AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+#endif    // Korean (Korea) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "Project(&F)"
+    BEGIN
+        MENUITEM "New Project (&N)\tCtrl+N",    ID_FILE_NEW
+        MENUITEM "Open Project (&O)...\tCtrl+O", ID_FILE_OPEN
+        MENUITEM "Save Project(&S)\tCtrl+S",    ID_FILE_SAVE
+        MENUITEM "Save Project As(&A)...",      ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Replace DNN file(nsas)",      ID_NEURALNETWORK_REPLACE
+        MENUITEM SEPARATOR
+        MENUITEM "Recent projects",             ID_FILE_MRU_FILE1
+        MENUITEM SEPARATOR
+        MENUITEM "Close(&X)",                   ID_APP_EXIT
+    END
+    POPUP "View"
+    BEGIN
+        MENUITEM "Properties Window",           ID_VIEW_PROPERTIES_WND
+        MENUITEM "Error Window",                ID_VIEW_ERROR_WND
+    END
+    POPUP "Help(&H)"
+    BEGIN
+        MENUITEM "NeuroStudio Info(&A)...",     ID_APP_ABOUT
+    END
+END
+
+#endif    // English resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "NeuroStudio\n\nNeuroStock\n\n\nNeuroStudio.Document\nNeuroStudio.Document"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "NeuroStudio"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MENU_LINK_DEL       "Delete Link"
+    IDS_MENU_MODEL_DEL      "Delete"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MENU_LAYER_ADD      "Add Layer"
+    IDS_MENU_ADD_OUTPUT_LAYER "Add Output layer"
+    IDS_MENU_LAYER_MULTI_DEL "Delete selected Layers"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MENU_BIN_READER_ADD_TO_INPUT "Add Binary reader to input"
+    IDS_MENU_TEXT_READER_ADD_TO_INPUT "Add Text reader to input"
+    IDS_MENU_PRODUCER_ADD   "Add Producer"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MENU_DISPLAY_DEL    "Delete display"
+    IDS_MENU_ADD_DISPLAY_LAYER_ALL "Display all layers"
+    IDS_MENU_CLEAR_ALL_DISPLAY_LAYER "Clear all result views"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ADD_ITEM            "Insert item"
+    IDS_DEL_ITEM            "Delete item"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "Create new project.\nNew"
+    ID_FILE_OPEN            "Open project.\nOpen"
+    ID_FILE_CLOSE           "Close project.\nClose"
+    ID_FILE_SAVE            "Save project.\nSave"
+    ID_FILE_SAVE_AS         "Save project with another name.\nSave as"
+END
+
+STRINGTABLE
+BEGIN
+    IDD_LAYER_DEFINE        "Configure Hidden AbstractLayerEngine"
+    IDD_DATA_PRODUCER_DEFINE "Select %s data producer"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_BUTTON_FIT_IO       "Fit %s Tensor"
+    IDC_STATIC_FIT_IO_TENSOR "Fit with %s Tensor"
+    IDC_STATIC_IO_TENSOR_LABEL "%s Tensor"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_UNTITLED        "New project"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TOOLBAR_CUSTOMIZE   "Customize..."
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE 18, 1
+#pragma code_page(949)
+#include "res\NeuroStudio.rc2"  // Microsoft Visual C++ 이외의 다른 도구에서 편집한 리소스입니다.
+#include "l.KOR\afxres.rc"          // 표준 구성 요소입니다.
+#if !defined(_AFXDLL)
+#include "l.KOR\afxprint.rc"                // 인쇄 미리 보기 리소스
+#include "l.KOR\afxribbon.rc"               // MFC 리본 및 컨트롤 막대 리소스
+#endif
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

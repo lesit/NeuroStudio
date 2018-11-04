@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="ImageTestDlg.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="NeuroStudioApp.cpp" />
+    <ClCompile Include="NeuroStudioDoc.cpp" />
+    <ClCompile Include="NeuroStudioView.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="..\..\project\LoadNSProject.cpp">
+      <Filter>project</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\project\NeuroStudioProject.cpp">
+      <Filter>project</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\project\NeuroSystemManager.cpp">
+      <Filter>project</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\project\NSProjectXML.cpp">
+      <Filter>project</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\project\SaveNSProject.cpp">
+      <Filter>project</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\desc\StringResource.cpp">
+      <Filter>desc</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleWnd.cpp" />
+    <ClCompile Include="..\..\project\SimDefinition.cpp">
+      <Filter>project</Filter>
+    </ClCompile>
+    <ClCompile Include="AbstractNNWnd.cpp" />
+    <ClCompile Include="LossGraphWnd.cpp" />
+    <ClCompile Include="..\..\..\common\gui\win32\GraphWnd.cpp">
+      <Filter>common\gui\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\gui\win32\ImageViewWnd.cpp">
+      <Filter>common\gui\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\gui\win32\JavaEditCtrl.cpp">
+      <Filter>common\gui\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\gui\win32\PaintWnd.cpp">
+      <Filter>common\gui\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\gui\win32\Win32Image.cpp">
+      <Filter>common\gui\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\gui\win32\WinUtil.cpp">
+      <Filter>common\gui\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\storage\FileDeviceAdaptor.cpp">
+      <Filter>common\storage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\storage\MemoryDeviceAdaptor.cpp">
+      <Filter>common\storage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\storage\MMFDeviceAdaptor.cpp">
+      <Filter>common\storage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\util\LogFileWriter.cpp">
+      <Filter>common\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\util\np_util.cpp">
+      <Filter>common\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\thread\Lock.cpp">
+      <Filter>common\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\gui\win32\ScrollWnd.cpp">
+      <Filter>common\gui\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\network\NetworkMatrix.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\network\NNMatrixModify.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\gui\win32\MappingWnd.cpp">
+      <Filter>common\gui\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\project\BindingViewManager.cpp">
+      <Filter>project</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelPropertyWnd.cpp" />
+    <ClCompile Include="property_configure\DataReaderPropertyConfigure.cpp">
+      <Filter>propery_configure</Filter>
+    </ClCompile>
+    <ClCompile Include="property_configure\DataProducerPropertyConfigure.cpp">
+      <Filter>propery_configure</Filter>
+    </ClCompile>
+    <ClCompile Include="property_configure\ImageProducerPropertyConfigure.cpp">
+      <Filter>propery_configure</Filter>
+    </ClCompile>
+    <ClCompile Include="property_configure\IncreasePredictProducerPropertyConfigure.cpp">
+      <Filter>propery_configure</Filter>
+    </ClCompile>
+    <ClCompile Include="property_configure\NlpProducerPropertyConfigure.cpp">
+      <Filter>propery_configure</Filter>
+    </ClCompile>
+    <ClCompile Include="property_configure\NumericProducerPropertyConfigure.cpp">
+      <Filter>propery_configure</Filter>
+    </ClCompile>
+    <ClCompile Include="property_configure\LayerPropertyConfigure.cpp">
+      <Filter>propery_configure</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\desc\TensorShapeDesc.cpp">
+      <Filter>desc</Filter>
+    </ClCompile>
+    <ClCompile Include="property_configure\NetworkPropertyConfigure.cpp">
+      <Filter>propery_configure</Filter>
+    </ClCompile>
+    <ClCompile Include="SimulationDlg.cpp" />
+    <ClCompile Include="AbstractSimSetupDlg.cpp" />
+    <ClCompile Include="..\..\..\common\gui\win32\GroupListCtrl.cpp">
+      <Filter>common\gui\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="SimDataTreeWnd.cpp" />
+    <ClCompile Include="..\..\simulation\Simulator.cpp">
+      <Filter>simulation</Filter>
+    </ClCompile>
+    <ClCompile Include="SimLearnSetupDlg.cpp" />
+    <ClCompile Include="SimPredictSetupDlg.cpp" />
+    <ClCompile Include="DesignNetworkWnd.cpp" />
+    <ClCompile Include="SimDisplaySetupLayerListWnd.cpp" />
+    <ClCompile Include="SimDisplaySetupNetworkWnd.cpp" />
+    <ClCompile Include="SimulationDisplayLayerWnd.cpp" />
+    <ClCompile Include="SimDisplaySetupWnd.cpp" />
+    <ClCompile Include="SimulationPredictStatusControl.cpp" />
+    <ClCompile Include="SimulationRunningWnd.cpp" />
+    <ClCompile Include="DeeplearningDesignView.cpp" />
+    <ClCompile Include="AnalysisWnd.cpp" />
+    <ClCompile Include="SimulationStatusControl.cpp" />
+    <ClCompile Include="SimulationTrainStatusControl.cpp" />
+    <ClCompile Include="DesignErrorOutputPane.cpp" />
+    <ClCompile Include="DesignPreprocessorWnd.cpp" />
+    <ClCompile Include="..\..\..\common\gui\win32\CheckDirectory.cpp">
+      <Filter>common\gui\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\gui\win32\WinFileUtil.cpp">
+      <Filter>common\gui\win32</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ImageTestDlg.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="NeuroStudioApp.h" />
+    <ClInclude Include="NeuroStudioDoc.h" />
+    <ClInclude Include="NeuroStudioView.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="..\..\project\LoadNSProject.h">
+      <Filter>project</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\project\NeuroStudioProject.h">
+      <Filter>project</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\project\NeuroSystemManager.h">
+      <Filter>project</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\project\NSProjectXML.h">
+      <Filter>project</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\project\SaveNSProject.h">
+      <Filter>project</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\desc\StringResource.h">
+      <Filter>desc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\StudioMenu.h" />
+    <ClInclude Include="TitleWnd.h" />
+    <ClInclude Include="..\..\project\SimDefinition.h">
+      <Filter>project</Filter>
+    </ClInclude>
+    <ClInclude Include="AbstractNNWnd.h" />
+    <ClInclude Include="LossGraphWnd.h" />
+    <ClInclude Include="..\..\..\common\gui\win32\GraphicUtil.h">
+      <Filter>common\gui\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\gui\win32\GraphWnd.h">
+      <Filter>common\gui\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\gui\win32\ImageViewWnd.h">
+      <Filter>common\gui\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\gui\win32\JavaEditCtrl.h">
+      <Filter>common\gui\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\gui\win32\ListDraw.h">
+      <Filter>common\gui\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\gui\win32\PaintWnd.h">
+      <Filter>common\gui\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\gui\win32\TextDraw.h">
+      <Filter>common\gui\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\gui\win32\Win32Image.h">
+      <Filter>common\gui\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\gui\win32\WinUtil.h">
+      <Filter>common\gui\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\gui\GraphDataSourceAbstract.h">
+      <Filter>common\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\gui\ImageProcessing.h">
+      <Filter>common\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\gui\shape.h">
+      <Filter>common\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\gui\StretchAxis.h">
+      <Filter>common\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\storage\MMFDeviceAdaptor.h">
+      <Filter>common\storage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\storage\DeviceAdaptor.h">
+      <Filter>common\storage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\storage\FileDeviceAdaptor.h">
+      <Filter>common\storage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\storage\MemoryDeviceAdaptor.h">
+      <Filter>common\storage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\util\LogFileWriter.h">
+      <Filter>common\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\util\np_util.h">
+      <Filter>common\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\util\randoms.h">
+      <Filter>common\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\util\StringUtil.h">
+      <Filter>common\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\util\UID64Pair32.h">
+      <Filter>common\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\util\UniqueIdFactory.h">
+      <Filter>common\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\common.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\np_types.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\thread\Lock.h">
+      <Filter>common\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\util\FileUtil.h">
+      <Filter>common\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\gui\win32\ScrollWnd.h">
+      <Filter>common\gui\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawLayerInfo.h" />
+    <ClInclude Include="..\..\project\LastSetLayerEntryVector.h">
+      <Filter>project</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\network\NetworkMatrix.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\network\NNMatrixModify.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\gui\grid.h">
+      <Filter>common\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\gui\win32\MappingWnd.h">
+      <Filter>common\gui\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="NeuroUnitDragSource.h" />
+    <ClInclude Include="..\..\project\BindingViewManager.h">
+      <Filter>project</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelPropertyWnd.h" />
+    <ClInclude Include="property_configure\DataPreprocessorPropertyConfigure.h">
+      <Filter>propery_configure</Filter>
+    </ClInclude>
+    <ClInclude Include="property_configure\DataProducerPropertyConfigure.h">
+      <Filter>propery_configure</Filter>
+    </ClInclude>
+    <ClInclude Include="property_configure\DataReaderPropertyConfigure.h">
+      <Filter>propery_configure</Filter>
+    </ClInclude>
+    <ClInclude Include="property_configure\LayerPropertyConfigure.h">
+      <Filter>propery_configure</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\desc\LayerDesc.h">
+      <Filter>desc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\desc\PreprocessorDesc.h">
+      <Filter>desc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\desc\TensorShapeDesc.h">
+      <Filter>desc</Filter>
+    </ClInclude>
+    <ClInclude Include="property_configure\NetworkPropertyConfigure.h">
+      <Filter>propery_configure</Filter>
+    </ClInclude>
+    <ClInclude Include="SimulationDlg.h" />
+    <ClInclude Include="AbstractSimSetupDlg.h" />
+    <ClInclude Include="..\..\..\common\gui\win32\GroupListCtrl.h">
+      <Filter>common\gui\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="SimDataTreeWnd.h" />
+    <ClInclude Include="..\..\simulation\Simulator.h">
+      <Filter>simulation</Filter>
+    </ClInclude>
+    <ClInclude Include="SimLearnSetupDlg.h" />
+    <ClInclude Include="SimPredictSetupDlg.h" />
+    <ClInclude Include="DesignNetworkWnd.h" />
+    <ClInclude Include="SimDisplaySetupLayerListWnd.h" />
+    <ClInclude Include="SimDisplaySetupNetworkWnd.h" />
+    <ClInclude Include="SimDisplaySetupWnd.h" />
+    <ClInclude Include="SimulationDisplayLayerWnd.h" />
+    <ClInclude Include="SimulationStatusControl.h" />
+    <ClInclude Include="SimulationPredictStatusControl.h" />
+    <ClInclude Include="SimulationRunningWnd.h" />
+    <ClInclude Include="DeeplearningDesignView.h" />
+    <ClInclude Include="..\..\..\common\NetworkBindingModel.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\NeuroBindingLink.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="AnalysisWnd.h" />
+    <ClInclude Include="SimulationTrainStatusControl.h" />
+    <ClInclude Include="DesignErrorOutputPane.h" />
+    <ClInclude Include="..\..\..\common\gui\line.h">
+      <Filter>common\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="DesignPreprocessorWnd.h" />
+    <ClInclude Include="..\..\..\common\gui\win32\CheckDirectory.h">
+      <Filter>common\gui\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\gui\win32\WinFileUtil.h">
+      <Filter>common\gui\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="SimDisplayLayerMatrixInfo.h" />
+    <ClInclude Include="..\..\..\common\core\MemoryManager.h">
+      <Filter>common\core</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="NeuroStudio.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\NeuroStudio.ico" />
+    <Image Include="res\NeuroStudioDoc.ico" />
+    <Image Include="res\Toolbar.bmp" />
+    <Image Include="res\Toolbar256.bmp" />
+    <Image Include="..\..\img\1d_1.bmp">
+      <Filter>img</Filter>
+    </Image>
+    <Image Include="..\..\img\1d_shape.bmp">
+      <Filter>img</Filter>
+    </Image>
+    <Image Include="..\..\img\2d_shape.bmp">
+      <Filter>img</Filter>
+    </Image>
+    <Image Include="..\..\img\3d_shape.bmp">
+      <Filter>img</Filter>
+    </Image>
+    <Image Include="..\..\img\batch_norm_layer.bmp">
+      <Filter>img</Filter>
+    </Image>
+    <Image Include="..\..\img\concat_layer.bmp">
+      <Filter>img</Filter>
+    </Image>
+    <Image Include="..\..\img\conv_layer.bmp">
+      <Filter>img</Filter>
+    </Image>
+    <Image Include="..\..\img\dropout_layer.bmp">
+      <Filter>img</Filter>
+    </Image>
+    <Image Include="..\..\img\fc_layer.bmp">
+      <Filter>img</Filter>
+    </Image>
+    <Image Include="..\..\img\lrcn_layer.bmp">
+      <Filter>img</Filter>
+    </Image>
+    <Image Include="..\..\img\pool_layer.bmp">
+      <Filter>img</Filter>
+    </Image>
+    <Image Include="..\..\img\rnn_layer.bmp">
+      <Filter>img</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\NeuroStudio.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="desc">
+      <UniqueIdentifier>{4ff64967-58ff-477f-ac4e-ed8acafe7c51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="project">
+      <UniqueIdentifier>{f43c481d-90c0-4d93-b55f-3eafa8b70e9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="img">
+      <UniqueIdentifier>{f7f618f0-0f8b-4a29-bb54-bb8dfd9a63f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="simulation">
+      <UniqueIdentifier>{fe11f1fb-6f3e-46da-9570-f619b57f1309}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{0ae2e341-579f-4479-8ed1-c2628b951db9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\util">
+      <UniqueIdentifier>{f4b46fc2-0fc9-4f99-adb8-a36141f0bb18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\gui">
+      <UniqueIdentifier>{27268c5f-a3c8-46be-9a2b-a8f22e1f25b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\gui\win32">
+      <UniqueIdentifier>{6202e826-28b0-47ec-8336-37f20770b1c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\storage">
+      <UniqueIdentifier>{46c34b08-3606-42a9-9801-133aa051c555}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\thread">
+      <UniqueIdentifier>{be1399ea-2169-4721-9b1b-6161bbfa141f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="network">
+      <UniqueIdentifier>{f6110500-1c8b-48d0-9232-c9ee58eb79fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="propery_configure">
+      <UniqueIdentifier>{5f3f44cb-f95b-43d1-9ec1-34909306ef22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\core">
+      <UniqueIdentifier>{0c5991c9-8f97-4824-a9b1-24eb0baf96c0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

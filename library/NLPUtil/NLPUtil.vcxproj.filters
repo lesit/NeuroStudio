@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{95d3cc83-f30d-43a7-89e1-9d460d7dbc2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\util">
+      <UniqueIdentifier>{eac1b30a-4489-40e5-a493-dca0b14fe56a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\storage">
+      <UniqueIdentifier>{9b36e27e-8f28-496f-850f-9efef5a1f879}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\3rd-party">
+      <UniqueIdentifier>{4c5d988a-62d4-47d3-a93d-3634ababcd66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\3rd-party\mecab-ko-vs">
+      <UniqueIdentifier>{9da4c086-6d5e-444b-a468-7ef12080f097}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\3rd-party\word2vec">
+      <UniqueIdentifier>{83918f2c-4684-45f5-854f-65aec86cd283}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\3rd-party\word2vec\fastText">
+      <UniqueIdentifier>{53799b1a-ba87-4db1-a649-1edda9558767}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\dp">
+      <UniqueIdentifier>{b5c405e8-c75a-4abe-a062-cd34858e1966}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\3rd-party\mecab\mecab-ko-v0.9.2\include\mecab.h">
+      <Filter>common\3rd-party\mecab-ko-vs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\storage\DeviceAdaptor.h">
+      <Filter>common\storage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\storage\FileDeviceAdaptor.h">
+      <Filter>common\storage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\util\LogFileWriter.h">
+      <Filter>common\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\util\np_util.h">
+      <Filter>common\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\util\StringUtil.h">
+      <Filter>common\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\3rd-party\word2vec\fastText\include\fasttext.h">
+      <Filter>common\3rd-party\word2vec\fastText</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\np_types.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="include\CreateW2VTrainDoc.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MecabParser.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SentenceToWord.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="include\WordToVector.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\util\FileUtil.h">
+      <Filter>common\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\dp\TextInputStream.h">
+      <Filter>common\dp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\dp\TextParsingReader.h">
+      <Filter>common\dp</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CreateW2VTrainDoc.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\storage\FileDeviceAdaptor.cpp">
+      <Filter>common\storage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\util\LogFileWriter.cpp">
+      <Filter>common\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\util\np_util.cpp">
+      <Filter>common\util</Filter>
+    </ClCompile>
+    <ClCompile Include="WordToVector.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MecabParser.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\util\StringUtil.cpp">
+      <Filter>common\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\dp\TextInputStream.cpp">
+      <Filter>common\dp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\dp\TextParsingReader.cpp">
+      <Filter>common\dp</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
