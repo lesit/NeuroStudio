@@ -1,8 +1,7 @@
 # Neuro Studio
 [![License](https://img.shields.io/badge/license-BSD-blue.svg)](LICENSE)
 
-Neuro Studio is GUI based Deep-learning Framework
-It is developed by Jae Wook Kim
+Neuro Studio is GUI based Deep-learning Framework. It has been developed by Jae Wook Kim since 2015.
 
 Check out the [project site](http://www.ainhuman.com) for all the details like
 - Brief description
