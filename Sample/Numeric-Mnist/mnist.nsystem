@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<np xmlns="np:system">
+
+  <NeuralNetwork>
+    <device.file filename="mnist.nsas"/>
+  </NeuralNetwork>
+
+  <data.preprocessor>
+    <provider.learn>
+      <reader.list/>
+      <producer.list>
+        <producer.mnist.image id="0" start.pos="0">
+          <binding.list>
+            <binding id="0"/>
+          </binding.list>
+        </producer.mnist.image>
+        <producer.mnist.label id="1" start.pos="0">
+          <binding.list>
+            <binding id="8"/>
+          </binding.list>
+        </producer.mnist.label>
+      </producer.list>
+    </provider.learn>
+    <provider.predict>
+      <reader.list/>
+      <producer.list>
+        <producer.image height="28" id="0" scale.type="mono" start.pos="0" width="28">
+          <binding.list>
+            <binding id="0"/>
+          </binding.list>
+        </producer.image>
+      </producer.list>
+    </provider.predict>
+  </data.preprocessor>
+
+  <simulation>
+    <resultView.list>
+      <resultView layer.uid="0" type="image"/>
+      <resultView argmax.output="true" layer.uid="8" onehot.analysis.result="true" type="list"/>
+      <resultView layer.uid="1" type="image"/>
+      <resultView layer.uid="9" type="image"/>
+      <resultView layer.uid="3" type="image"/>
+    </resultView.list>
+    <env>
+      <env.train minibatch.size="100" ndf.use="false">
+        <end.condition epoch.max="1000"/>
+        <display period.sample="600"/>
+        <analyze argmax_accuracy="true" loss_history="true"/>
+      </env.train>
+      <env.run minibatch.size="32">
+        <display period.sample="1"/>
+      </env.run>
+    </env>
+    <train.data>
+      <train.learn>
+        <item id="0">
+          <file filepath="train-images.idx3-ubyte"/>
+          <file filepath="t10k-images.idx3-ubyte"/>
+        </item>
+        <item id="1">
+          <file filepath="train-labels.idx1-ubyte"/>
+          <file filepath="t10k-labels.idx1-ubyte"/>
+        </item>
+      </train.learn>
+      <train.test/>
+    </train.data>
+    <predict.data>
+      <predict.input>
+        <item id="0"/>
+      </predict.input>
+      <predict.output output.no.prefix=""/>
+    </predict.data>
+  </simulation>
+
+</np>
