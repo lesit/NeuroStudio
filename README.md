@@ -5,7 +5,11 @@ Neuro Studio is GUI based Deep-learning Framework. It has been developed by Jae 
 
 Check out the [project site](http://www.ainhuman.com) for all the details like
 - Brief description
-- Samples
+
+Some screenshots are below
+![](docs/img/NeuroStudio-create_model.png)
+![](docs/img/NeuroStudio-setup_sim.png)
+![](docs/img/NeuroStudio-simulating.png)
 
 [Sample Video](https://www.youtube.com/watch?v=WvbD-ejz2NI)
 
