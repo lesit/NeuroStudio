@@ -7,8 +7,13 @@ Check out the [project site](http://www.ainhuman.com) for all the details like
 - Brief description
 
 Some screenshots are below
+- Create model
 ![](docs/img/NeuroStudio-create_model.png)
+
+- Setup displays for simulation
 ![](docs/img/NeuroStudio-setup_sim.png)
+
+- Visualization Tool for simulation
 ![](docs/img/NeuroStudio-simulating.png)
 
 [Sample Video](https://www.youtube.com/watch?v=WvbD-ejz2NI)
