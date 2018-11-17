@@ -27,9 +27,8 @@ namespace np
 			bool Initialize(core::math_device_type pdtype, core::cuda::CudaInstance* cuda_instance
 				, const network::_LEARNING_INFO& info
 				, const std::vector<neuro_float>& opt_parameters
-				, dp::preprocessor::DataProvider& provider
-				, dp::preprocessor::DataProvider* test_provider
-				, const _producer_layer_data_vector& data_vector)
+				, dp::preprocessor::DataProvider& provider, const _producer_layer_data_vector& data_vector
+				, dp::preprocessor::DataProvider* test_provider, const _producer_layer_data_vector& test_data_vector)
 			{
 				optimize_epoch = optimizer::OptimizeInEpoch::CreateInstance(pdtype, cuda_instance, info.optimizer_type, opt_parameters, info.optimizing_rule);
 				if (optimize_epoch == NULL)
@@ -55,7 +54,7 @@ namespace np
 
 				if (test_provider)
 				{
-					test_batch_gen = new MiniBatchSequentialGenerator(*test_provider, data_vector);
+					test_batch_gen = new MiniBatchSequentialGenerator(*test_provider, test_data_vector);
 					if (!test_batch_gen->Ready(provider.batch_size))
 					{
 						DEBUG_OUTPUT(L"failed ready of batch generator to test after learn");

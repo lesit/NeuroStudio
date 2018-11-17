@@ -538,12 +538,14 @@ void LoadNSProject::LoadSimTrainData(const XERCES_CPP_NAMESPACE::DOMElement* ele
 {
 	const XERCES_CPP_NAMESPACE::DOMElement* trainElem = elem->getFirstElementChild();
 
+	project::SimDefinition& sim_def = m_project.GetSimManager();
+
 	for (; trainElem != NULL; trainElem = trainElem->getNextElementSibling())
 	{
 		if (wcscmp(trainElem->getLocalName(), elem::szTrainLearn) == 0)
-			LoadSimData(trainElem, m_project.GetSimManager().GetLastLearnData());
+			LoadSimData(trainElem, sim_def.GetLastLearnData());
 		else if (wcscmp(trainElem->getLocalName(), elem::szTrainTest) == 0)
-			LoadSimData(trainElem, m_project.GetSimManager().GetLastTestData());
+			LoadSimData(trainElem, sim_def.GetLastTestData());
 	}
 }
 

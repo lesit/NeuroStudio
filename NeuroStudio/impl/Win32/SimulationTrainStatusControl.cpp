@@ -322,7 +322,8 @@ void SimulationTrainStatusControl::SetOnehotResultList(const _output_analysis_on
 		for (neuro_u32 output = 0; output < output_analysis_onehot_vector.size(); output++)
 		{
 			const _output_analysys_onehot& output_analysys_onehot = output_analysis_onehot_vector[output];
-			CString header; header.Format(L"%u", output_analysys_onehot.layer->m_layer.uid);	// 원래는 layer의 matrix 포인터를 넣어야 한다.
+			CString header; header.Format(L"%u,%u", output_analysys_onehot.layer->m_layer.gui_grid_point.x,
+													output_analysys_onehot.layer->m_layer.gui_grid_point.y);
 			ctrOnehotResultList.InsertGroupHeader(output, header);
 
 			for (neuro_u32 i = 0, n = output_analysys_onehot.results.size(); i < n; i++)
@@ -344,10 +345,10 @@ void SimulationTrainStatusControl::SetOnehotResultList(const _output_analysis_on
 
 			if (test_result)
 			{
-				const _analysis_onehot& test_after_learn_analysis = output_analysys_onehot.test_after_learn[i];
-				ctrOnehotResultList.SetItemText(onehot_result_index, 4, util::StringUtil::Transform<wchar_t>(test_after_learn_analysis.target_accumulate).c_str());
-				ctrOnehotResultList.SetItemText(onehot_result_index, 5, util::StringUtil::Transform<wchar_t>(test_after_learn_analysis.out_accumulate).c_str());
-				ctrOnehotResultList.SetItemText(onehot_result_index, 6, util::StringUtil::Transform<wchar_t>(test_after_learn_analysis.accord_accumulate).c_str());
+				const _analysis_onehot& test_analysis = output_analysys_onehot.test_after_learn[i];
+				ctrOnehotResultList.SetItemText(onehot_result_index, 4, util::StringUtil::Transform<wchar_t>(test_analysis.target_accumulate).c_str());
+				ctrOnehotResultList.SetItemText(onehot_result_index, 5, util::StringUtil::Transform<wchar_t>(test_analysis.out_accumulate).c_str());
+				ctrOnehotResultList.SetItemText(onehot_result_index, 6, util::StringUtil::Transform<wchar_t>(test_analysis.accord_accumulate).c_str());
 			}
 		}
 	}

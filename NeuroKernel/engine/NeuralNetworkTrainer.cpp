@@ -51,48 +51,66 @@ bool NeuralNetworkTrainer::Train(const TRAIN_SETUP& setup)
 
 	_producer_layer_data_vector data_vector;
 	data_vector.resize(input_engine_vector.size()+ output_engine_vector.size());
-	_producer_layer_data_vector::iterator it_data = data_vector.begin();
+	_producer_layer_data_vector test_data_vector;
+	test_data_vector.resize(data_vector.size());
 
+	_producer_layer_data_vector::iterator it_data = data_vector.begin();
+	_producer_layer_data_vector::iterator it_test_data = test_data_vector.begin();
+
+	// test batch generator에 data.provider가 아닌 data.test_provider 의 producer를 넣어야 한다!
 	for (neuro_u32 i = 0; i < input_engine_vector.size(); i++)
 	{
 		InputLayerEngine* engine = input_engine_vector[i];
 
-		_PRODUCER_LAYER_DATA_SET& producer_layer_data_set = *(it_data++);
+		_PRODUCER_LAYER_DATA_SET& data_set = *(it_data++);
 
-		producer_layer_data_set.producer = FindLayerBindingProducer(*setup.data.provider, *engine);
-		if (producer_layer_data_set.producer == NULL)
+		data_set.producer = FindLayerBindingProducer(*setup.data.provider, *engine);
+		if (data_set.producer == NULL)
 		{
 			DEBUG_OUTPUT(L"no binding producer for input layer[%u]", engine->m_layer.uid);
 			return false;
 		}
-		producer_layer_data_set.producer_dim_size = producer_layer_data_set.producer->m_data_dim_size;
+		data_set.producer_dim_size = data_set.producer->m_data_dim_size;
 
 		const tensor::_NEURO_TENSOR_DATA& data = engine->GetOutputData();
-		producer_layer_data_set.layer_mm = &data.data.mm;
-		producer_layer_data_set.layer_buffer = data.GetBuffer();
-		producer_layer_data_set.layer_data_size = data.GetTimeValueSize();
+		data_set.layer_mm = &data.data.mm;
+		data_set.layer_buffer = data.GetBuffer();
+		data_set.layer_data_size = data.GetTimeValueSize();
 
+		if (setup.data.test_provider)
+		{
+			_PRODUCER_LAYER_DATA_SET& test_data_set = *(it_test_data++);
+			test_data_set = data_set;
+			test_data_set.producer = FindLayerBindingProducer(*setup.data.test_provider, *engine);
+		}
 	}
 	for (neuro_u32 i = 0; i < output_engine_vector.size(); i++)
 	{
 		OutputLayerEngine* engine = output_engine_vector[i];
 
-		_PRODUCER_LAYER_DATA_SET& producer_layer_data_set = *(it_data++);
+		_PRODUCER_LAYER_DATA_SET& data_set = *(it_data++);
 
-		producer_layer_data_set.producer = FindLayerBindingProducer(*setup.data.provider, *engine);
-		if (producer_layer_data_set.producer == NULL)
+		data_set.producer = FindLayerBindingProducer(*setup.data.provider, *engine);
+		if (data_set.producer == NULL)
 		{
 			DEBUG_OUTPUT(L"no binding producer for output layer[%u]", engine->m_layer.uid);
 			return false;
 		}
-		producer_layer_data_set.producer_dim_size = producer_layer_data_set.producer->m_data_dim_size;
+		data_set.producer_dim_size = data_set.producer->m_data_dim_size;
 
-		producer_layer_data_set.read_label = producer_layer_data_set.producer->m_label_out_type!=dp::model::_label_out_type::none;
+		data_set.read_label = data_set.producer->m_label_out_type!=dp::model::_label_out_type::none;
 
 		const tensor::_TYPED_TENSOR_DATA<void*, 4>& data = engine->GetTargetData();
-		producer_layer_data_set.layer_mm = &data.data.mm;
-		producer_layer_data_set.layer_buffer = data.GetBuffer();
-		producer_layer_data_set.layer_data_size = data.GetTimeValueSize();
+		data_set.layer_mm = &data.data.mm;
+		data_set.layer_buffer = data.GetBuffer();
+		data_set.layer_data_size = data.GetTimeValueSize();
+
+		if (setup.data.test_provider)
+		{
+			_PRODUCER_LAYER_DATA_SET& test_data_set = *(it_test_data++);
+			test_data_set = data_set;
+			test_data_set.producer = FindLayerBindingProducer(*setup.data.test_provider, *engine);
+		}
 	}
 
 	_learn_type learn_type = setup.learn.learn_type;
@@ -108,8 +126,8 @@ bool NeuralNetworkTrainer::Train(const TRAIN_SETUP& setup)
 	TrainFunctions train_funcs;
 	if (!train_funcs.Initialize(m_network.GetNetParam().run_pdtype, m_network.GetNetParam().cuda_instance
 		, m_network.GetLearningInfo(), opt_parameters
-		, *setup.data.provider, setup.data.test_provider
-		, data_vector))
+		, *setup.data.provider, data_vector
+		, setup.data.test_provider, test_data_vector))
 	{
 		DEBUG_OUTPUT(L"failed initialize train functions");
 		return false;
