@@ -23,6 +23,7 @@ Some screenshots are below
 - Test with LSTM
 - Add some data preprocessor
 - Add an environment for Reinforcement Learning, including the latest algorithms such as A3C as well as DQN
+- Add an environment for GAN, including the latest algorithms such as Progressive growing of GANs
 - Add more layer and loss, optimizer algorithms
 - Develope a Virtual Machine to run a model by created Neuro Studio. It will run any computer machine.
 
