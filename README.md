@@ -22,6 +22,7 @@ Some screenshots are below
 - Fix some bugs including gui related bugs
 - Test with LSTM
 - Add some data preprocessor
+- Add an environment for Reinforcement Learning, including the latest algorithms such as A3C as well as DQN
 - Add more layer and loss, optimizer algorithms
 - Develope a Virtual Machine to run a model by created Neuro Studio. It will run any computer machine.
 
